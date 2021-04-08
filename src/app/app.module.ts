@@ -1,16 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
+import { PaymentDetailsComponent } from './payment-details/payment-details.component';
+import { PaymentDetailComponent } from './payment-details/payment-detail/payment-detail.component';
+import { PaymentDetailsListComponent } from './payment-details/payment-details-list/payment-details-list.component';
+import { PaymentDetailService } from './shared/payment-detail.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PaymentDetailsComponent,
+    PaymentDetailComponent,
+    PaymentDetailsListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PaymentDetailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
